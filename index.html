@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Paws Training Center - Huấn Luyện Chó Chuyên Nghiệp</title>
+    
+    <!-- SEO Optimization Meta Tags -->
+    <meta name="description" content="Happy Paws Training Center - Trung tâm đào tạo và huấn luyện chó chuyên nghiệp theo phương pháp khoa học, tích cực (Positive Reinforcement). Cung cấp các khóa học cún con, kỷ luật đội nhóm, dạy kèm 1-1 và nội trú huấn luyện cao cấp.">
+    <meta name="keywords" content="huấn luyện chó, đào tạo cún cưng, chăm sóc thú cưng, trường dạy chó, happy paws, dog training vietnam">
+    <meta name="author" content="Happy Paws Training Center">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph (OG) Social Sharing -->
+    <meta property="og:title" content="Happy Paws Training Center - Huấn Luyện Chó Chuyên Nghiệp">
+    <meta property="og:description" content="Huấn luyện chó bằng tình yêu thương và khoa học. Đăng ký nhận tư vấn miễn phí ngay hôm nay!">
+    <meta property="og:image" content="./assets/images/hero-dog.png">
+    <meta property="og:type" content="website">
+    
+    <!-- Premium Fonts & Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================================================================
+         0. LOADING SCREEN (UI/UX EXCELLENCE)
+         ================================================================ -->
+    <div id="loader">
+        <div class="loader-paw">
+            <i class="fa-solid fa-paw"></i>
+        </div>
+        <div class="loader-bar"></div>
+    </div>
+
+    <!-- ================================================================
+         1. HEADER (STICKY GLASSMORPHIC MENU)
+         ================================================================ -->
+    <div class="header-wrapper">
+        <header id="main-header">
+            <div class="container header-container">
+                <!-- Left Side: Custom Logo -->
+                <a href="#home" class="logo" id="header-logo">
+                    <i class="fa-solid fa-paw"></i>
+                    Happy Paws<span>.</span>
+                </a>
+
+                <!-- Middle: Navigation Links -->
+                <nav class="nav-menu" id="desktop-menu">
+                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#why-choose" class="nav-link">Why Us</a>
+                    <a href="#benefits" class="nav-link">Benefits</a>
+                    <a href="#schedule" class="nav-link">Schedule</a>
+                    <a href="#testimonials" class="nav-link">Testimonials</a>
+                    <a href="#blog" class="nav-link">Blog</a>
+                </nav>
+
+                <!-- Right Side: Search & CTA Action -->
+                <div class="header-actions">
+                    <button class="search-btn" id="search-trigger" aria-label="Tìm kiếm">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <a href="#contact" class="btn btn-primary btn-glow">Book Consultation</a>
+                    
+                    <!-- Burger Icon for Mobile Navigation -->
+                    <div class="hamburger" id="hamburger-menu" aria-label="Menu di động">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <!-- Full Screen Search Overlay -->
+    <div class="search-overlay" id="search-container">
+        <div class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></div>
+        <form class="search-form" action="#" method="GET">
+            <input type="text" class="search-input" placeholder="Tìm kiếm dịch vụ, lịch học..." required>
+            <button type="submit" class="search-form-btn" aria-label="Thực hiện tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <div class="mobile-menu-backdrop" id="menu-backdrop"></div>
+    <div class="mobile-nav" id="mobile-navigation">
+        <nav class="mobile-nav-menu">
+            <a href="#home" class="mobile-nav-link active">Home</a>
+            <a href="#services" class="mobile-nav-link">Services</a>
+            <a href="#why-choose" class="mobile-nav-link">Why Us</a>
+            <a href="#benefits" class="mobile-nav-link">Benefits</a>
+            <a href="#schedule" class="mobile-nav-link">Schedule</a>
+            <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
+            <a href="#blog" class="mobile-nav-link">Blog</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+        </nav>
+        <div class="mobile-nav-bottom">
+            <a href="#contact" class="btn btn-primary w-full text-center">Book Consultation</a>
+            <div class="mobile-socials">
+                <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <main>
+        <!-- ================================================================
+             2. HERO BANNER SECTION (INTERACTIVE LANDING)
+             ================================================================ -->
+        <section id="home" class="hero-section">
+            <div class="container hero-grid">
+                <!-- Left Content -->
+                <div class="hero-content fade-in-up visible">
+                    <div class="hero-badge animate-float">
+                        <i class="fa-solid fa-award"></i> Đạt chuẩn Đào tạo Premium 2026
+                    </div>
+                    <h1 class="hero-title">
+                        Professional<br><span>Dog Training</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Phương pháp huấn luyện tích cực, dựa trên phần thưởng giúp cún yêu của bạn phát triển toàn diện, ngoan ngoãn và hạnh phúc nhất.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary btn-glow">Book Consultation</a>
+                        <a href="#services" class="btn btn-secondary">Learn More <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                    <!-- Social Trust Stats -->
+                    <div class="hero-trust">
+                        <div class="avatar-group">
+                            <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Khách hàng 1">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Khách hàng 2">
+                            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Khách hàng 3">
+                        </div>
+                        <div class="trust-info">
+                            <div class="trust-stars">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                            </div>
+                            <strong>+2,500 Chủ Nuôi</strong> đã đánh giá 5 Sao tại Hà Nội & HCM
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Side: AI Generated Intelligent Dog with stickers -->
+                <div class="hero-image-wrapper fade-in-up visible delay-200">
+                    <div class="hero-image-bg"></div>
+                    <div class="hero-image">
+                        <img src="./assets/images/hero-dog.png" alt="Happy Intelligent Border Collie">
+                    </div>
+                    
+                    <!-- Floating Sticker 1 -->
+                    <div class="floating-badge badge-1 animate-float">
+                        <i class="fa-solid fa-certificate"></i>
+                        <div class="badge-label">
+                            <span>100% Certified</span>
+                            <span>Huấn luyện viên Quốc tế</span>
+                        </div>
+                    </div>
+
+                    <!-- Floating Sticker 2 -->
+                    <div class="floating-badge badge-2 animate-float-delay">
+                        <i class="fa-solid fa-heart"></i>
+                        <div class="badge-label">
+                            <span>Positive Only</span>
+                            <span>Không đòn roi áp đặt</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             3. SERVICES SECTION (PREMIUM METICULOUS CARDS)
+             ================================================================ -->
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-tag">Dịch vụ cốt lõi</span>
+                    <h2 class="section-title">Chương Trình Đào Tạo</h2>
+                    <p class="section-subtitle">Thiết kế lộ trình khoa học phù hợp với từng độ tuổi và tính cách đặc trưng của cún.</p>
+                </div>
+
+                <!-- Services Grid (Slider on mobile via custom script) -->
+                <div class="services-grid fade-in-up delay-100">
+                    <!-- Service 1 -->
+                    <div class="service-card">
+                        <img class="service-card-img" src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?q=80&w=600&auto=format&fit=crop" alt="Puppy Training">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <div class="service-card-icon"><i class="fa-solid fa-baby-carriage"></i></div>
+                            <h3 class="service-card-title">Puppy Training</h3>
+                            <p class="service-card-desc">Xây dựng nền tảng kỷ luật ban đầu, huấn luyện đi vệ sinh đúng chỗ, làm quen xã hội và các lệnh căn bản từ 2-6 tháng tuổi.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 2 -->
+                    <div class="service-card">
+                        <img class="service-card-img" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=600&auto=format&fit=crop" alt="Group Obedience Training">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <div class="service-card-icon"><i class="fa-solid fa-users"></i></div>
+                            <h3 class="service-card-title">Group Obedience</h3>
+                            <p class="service-card-desc">Tập trung nâng cao khả năng nghe lời trong môi trường có nhiều tác nhân gây xao nhãng. Học tập hòa đồng cùng các bạn chó khác.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 3 -->
+                    <div class="service-card">
+                        <img class="service-card-img" src="https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=600&auto=format&fit=crop" alt="Private Lessons">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <div class="service-card-icon"><i class="fa-solid fa-graduation-cap"></i></div>
+                            <h3 class="service-card-title">Private Lessons</h3>
+                            <p class="service-card-desc">Giáo trình thiết kế riêng 1-1 cùng Huấn luyện viên tại nhà hoặc trung tâm, giải quyết dứt điểm các thói quen xấu đặc thù.</p>
+                        </div>
+                    </div>
+
+                    <!-- Service 4 -->
+                    <div class="service-card">
+                        <img class="service-card-img" src="https://images.unsplash.com/photo-1517849845537-4d257902454a?q=80&w=600&auto=format&fit=crop" alt="Board & Train">
+                        <div class="service-card-overlay"></div>
+                        <div class="service-card-content">
+                            <div class="service-card-icon"><i class="fa-solid fa-hotel"></i></div>
+                            <h3 class="service-card-title">Board & Train</h3>
+                            <p class="service-card-desc">Kỳ nghỉ nội trú cao cấp kết hợp đào tạo kỷ luật chuyên sâu. Cún ăn nghỉ trong phòng máy lạnh chuẩn 5 sao và huấn luyện hàng ngày.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             4. WHY CHOOSE US SECTION (PREMIUM ADVANTAGES GRID)
+             ================================================================ -->
+        <section id="why-choose" class="why-section">
+            <div class="container why-grid">
+                <!-- Left Side Description -->
+                <div class="why-content fade-in-up">
+                    <span class="section-tag">Giá trị vượt trội</span>
+                    <h2 class="section-title">Why Choose Happy Paws</h2>
+                    <p class="why-content-subtitle">Chúng tôi không chỉ dạy cún nghe lời, chúng tôi xây dựng nhịp cầu thấu hiểu bền chặt giữa bạn và người bạn bốn chân.</p>
+                    <p class="section-subtitle" style="margin-bottom: 30px;">
+                        Với đội ngũ chuyên gia nghiên cứu hành vi thú cưng hàng đầu, Happy Paws áp dụng các kỹ thuật huấn luyện hiện đại dựa trên phản xạ tích cực được công nhận bởi hiệp hội động vật quốc tế.
+                    </p>
+                    <a href="#schedule" class="btn btn-primary">Xem Lịch Học <i class="fa-solid fa-calendar-days"></i></a>
+                </div>
+
+                <!-- Right Side Advantages Grid -->
+                <div class="why-features-grid fade-in-up delay-200">
+                    <!-- Item 1 -->
+                    <div class="why-feature-item">
+                        <div class="feature-icon-circle"><i class="fa-solid fa-award"></i></div>
+                        <div class="feature-info">
+                            <h4>Positive Reward Training</h4>
+                            <p>Huấn luyện động lực bằng mồi ngon và lời khen ngợi kích thích trí thông minh.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="why-feature-item">
+                        <div class="feature-icon-circle"><i class="fa-solid fa-sliders"></i></div>
+                        <div class="feature-info">
+                            <h4>Multiple Methods</h4>
+                            <p>Tích hợp đa dạng phương pháp thích ứng hoàn hảo với từng giống chó.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="why-feature-item">
+                        <div class="feature-icon-circle"><i class="fa-solid fa-user-shield"></i></div>
+                        <div class="feature-info">
+                            <h4>Certified Trainers</h4>
+                            <p>100% Huấn luyện viên có bằng cấp quốc tế APDT uy tín dày dạn kinh nghiệm.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 4 -->
+                    <div class="why-feature-item">
+                        <div class="feature-icon-circle"><i class="fa-solid fa-shield-dog"></i></div>
+                        <div class="feature-info">
+                            <h4>Behavior Specialist</h4>
+                            <p>Chuyên gia điều chỉnh các vấn đề tâm lý phức tạp như sợ hãi, hung dữ quá độ.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="why-feature-item">
+                        <div class="feature-icon-circle"><i class="fa-solid fa-star"></i></div>
+                        <div class="feature-info">
+                            <h4>5 Star Reviews</h4>
+                            <p>Hàng ngàn phản hồi hạnh phúc từ các chủ nuôi sau khóa huấn luyện.</p>
+                        </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="why-feature-item">
+                        <div class="feature-icon-circle"><i class="fa-solid fa-leaf"></i></div>
+                        <div class="feature-info">
+                            <h4>Friendly Environment</h4>
+                            <p>Không gian sân cỏ rộng mở xanh sạch giúp cún học tập thoải mái nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             5. TRAINING BENEFITS SECTION (CENTRALIZED DOG DISPLAY WITH CONNECTIONS)
+             ================================================================ -->
+        <section id="benefits" class="benefits-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-tag">Hiệu quả thực tế</span>
+                    <h2 class="section-title">Lợi Ích Sau Huấn Luyện</h2>
+                    <p class="section-subtitle">Mang đến sự chuyển biến vượt bậc trong cuộc sống chung sống thường ngày giữa chủ và cún.</p>
+                </div>
+
+                <div class="benefits-layout">
+                    <!-- Left Columns (3 Benefits) -->
+                    <div class="benefits-column benefits-left fade-in-up delay-100">
+                        <!-- Benefit 1 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-hands-clapping"></i></div>
+                            <div class="benefit-text-box">
+                                <h4 class="benefit-title">Greeting Politely</h4>
+                                <p class="benefit-desc">Cún không còn vồ vập, nhảy chồm lên người khi đón khách hoặc gặp người lạ ngoài đường.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 2 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-shoe-prints"></i></div>
+                            <div class="benefit-text-box">
+                                <h4 class="benefit-title">Relaxed Walks</h4>
+                                <p class="benefit-desc">Đi dạo thong thả, không kéo dây xích, luôn đi sát gót chân chủ một cách điềm tĩnh.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 3 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-scissors"></i></div>
+                            <div class="benefit-text-box">
+                                <h4 class="benefit-title">Grooming Acceptance</h4>
+                                <p class="benefit-desc">Hợp tác tuyệt đối khi chải lông, cắt móng, tắm rửa và kiểm tra sức khỏe y tế.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Center Dog Picture display with dynamic rotating circle -->
+                    <div class="benefits-center fade-in-up delay-200">
+                        <div class="benefits-center-circle"></div>
+                        <div class="benefits-dog-img">
+                            <img src="https://images.unsplash.com/photo-1552053831-71594a27632d?q=80&w=600&auto=format&fit=crop" alt="Golden Retriever thông minh">
+                        </div>
+                    </div>
+
+                    <!-- Right Columns (3 Benefits) -->
+                    <div class="benefits-column benefits-right fade-in-up delay-300">
+                        <!-- Benefit 4 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-tree"></i></div>
+                            <div class="benefit-text-box">
+                                <h4 class="benefit-title">Playing at the Park</h4>
+                                <p class="benefit-desc">Lắng nghe tuyệt đối hiệu lệnh gọi quay lại (Recall) bất kể trong không gian mở xao nhãng.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 5 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-utensils"></i></div>
+                            <div class="benefit-text-box">
+                                <h4 class="benefit-title">Restaurant Etiquette</h4>
+                                <p class="benefit-desc">Nằm yên ngoan ngoãn dưới chân bàn khi bạn thưởng thức cà phê hay ăn uống tại nhà hàng.</p>
+                            </div>
+                        </div>
+
+                        <!-- Benefit 6 -->
+                        <div class="benefit-card">
+                            <div class="benefit-icon"><i class="fa-solid fa-eye"></i></div>
+                            <div class="benefit-text-box">
+                                <h4 class="benefit-title">Better Attention</h4>
+                                <p class="benefit-desc">Khả năng tập trung giao tiếp mắt (Eye contact) tốt, nhanh chóng thực hiện mệnh lệnh của chủ.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             6. SCHEDULE & CLASSES SECTION (CREATIVE CHALKBOARD INTERFACE)
+             ================================================================ -->
+        <section id="schedule" class="schedule-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-tag">Thời khóa biểu</span>
+                    <h2 class="section-title">Lịch Học & Các Lớp Đào Tạo</h2>
+                    <p class="section-subtitle">Chọn lớp học phù hợp nhất với giai đoạn phát triển của cún yêu và đăng ký giữ chỗ ngay hôm nay.</p>
+                </div>
+
+                <!-- Navigation Tabs styled with premium pills -->
+                <div class="schedule-tabs fade-in-up">
+                    <button class="schedule-tab active" data-target="panel-puppy">Puppy Preschool</button>
+                    <button class="schedule-tab" data-target="panel-middle">Middle School</button>
+                    <button class="schedule-tab" data-target="panel-finish">Finishing School</button>
+                    <button class="schedule-tab" data-target="panel-upcoming">Upcoming Classes</button>
+                </div>
+
+                <!-- Chalkboard Wrapper with Oak Frame & SVG decorations -->
+                <div class="chalkboard-container fade-in-up delay-200">
+                    
+                    <!-- SVG Dog Bone Decoration -->
+                    <div class="chalkboard-decor decor-bone">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M19 12a2.5 2.5 0 0 0 2.5-2.5v-1a2.5 2.5 0 0 0-5 0v.5a.5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5v-.5a2.5 2.5 0 0 0-5 0v1a2.5 2.5 0 0 0 4.2 1.8.5.5 0 0 1 .6 0A2.5 2.5 0 0 0 11.5 15a.5.5 0 0 1-.5-.5v-.5a2.5 2.5 0 0 0-5 0v1a2.5 2.5 0 0 0 2.5 2.5h8a2.5 2.5 0 0 0 2.5-2.5v-1a2.5 2.5 0 0 0-5 0v.5a.5.5 0 0 1-.5.5h-3" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <!-- SVG Toy Ball Rope Decoration -->
+                    <div class="chalkboard-decor decor-toy">
+                        <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="6" stroke-dasharray="2 2"/>
+                            <path d="M6 12s2-4 6-4 6 4 6 4M6 12s2 4 6 4 6-4 6-4" stroke-linecap="round"/>
+                            <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <!-- SVG Feeding Bowl Decoration -->
+                    <div class="chalkboard-decor decor-bowl">
+                        <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 16h18v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2z" stroke-linecap="round"/>
+                            <path d="M6 16c1-3 3-5 6-5s5 2 6 5M9 12V9M15 12V9M12 11V8" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <!-- Panel 1: Puppy Preschool -->
+                    <div class="schedule-panel active" id="panel-puppy">
+                        <div class="chalkboard-header">
+                            <h3>Puppy Preschool (Cún con từ 2 - 6 tháng tuổi)</h3>
+                        </div>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Lớp Học</th>
+                                    <th>Lịch Học</th>
+                                    <th>Thời Gian</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Hành Động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="class-name">Puppy Basic Obedience <br><span class="class-instructor">GV. Tuấn Minh</span></td>
+                                    <td>Thứ 2, 4, 6</td>
+                                    <td class="class-time">09:00 - 10:30</td>
+                                    <td><span class="class-spots">Còn 3 chỗ</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Find out more</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="class-name">Xã hội hóa Cún con <br><span class="class-instructor">GV. Hà Phương</span></td>
+                                    <td>Thứ 7, Chủ Nhật</td>
+                                    <td class="class-time">15:00 - 16:30</td>
+                                    <td><span class="class-spots">Còn 2 chỗ</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Find out more</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Panel 2: Middle School -->
+                    <div class="schedule-panel" id="panel-middle">
+                        <div class="chalkboard-header">
+                            <h3>Middle School (Cún từ 6 - 12 tháng tuổi)</h3>
+                        </div>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Lớp Học</th>
+                                    <th>Lịch Học</th>
+                                    <th>Thời Gian</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Hành Động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="class-name">Kỷ Luật & Vượt Chướng Ngại Vật <br><span class="class-instructor">GV. Hoàng Nam</span></td>
+                                    <td>Thứ 3, Thứ 5</td>
+                                    <td class="class-time">09:30 - 11:00</td>
+                                    <td><span class="class-spots">Còn 5 chỗ</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Find out more</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="class-name">Nghe lời nâng cao (Off-Leash) <br><span class="class-instructor">GV. Quốc Anh</span></td>
+                                    <td>Thứ Bảy</td>
+                                    <td class="class-time">08:00 - 10:00</td>
+                                    <td><span class="class-spots full">Lớp đã đầy</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Find out more</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Panel 3: Finishing School -->
+                    <div class="schedule-panel" id="panel-finish">
+                        <div class="chalkboard-header">
+                            <h3>Finishing School (Tốt nghiệp & Kỹ năng Đặc biệt)</h3>
+                        </div>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Lớp Học</th>
+                                    <th>Lịch Học</th>
+                                    <th>Thời Gian</th>
+                                    <th>Trạng Thái</th>
+                                    <th>Hành Động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="class-name">Chó Bảo Vệ & Trông Giữ Tài Sản <br><span class="class-instructor">GV. Hoàng Nam</span></td>
+                                    <td>Thứ 2, Thứ 6</td>
+                                    <td class="class-time">16:00 - 18:00</td>
+                                    <td><span class="class-spots">Còn 2 chỗ</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Find out more</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="class-name">Huấn luyện Biểu diễn Kỹ xảo <br><span class="class-instructor">GV. Hà Phương</span></td>
+                                    <td>Chủ Nhật</td>
+                                    <td class="class-time">16:00 - 17:30</td>
+                                    <td><span class="class-spots">Còn 4 chỗ</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Find out more</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Panel 4: Upcoming Classes -->
+                    <div class="schedule-panel" id="panel-upcoming">
+                        <div class="chalkboard-header">
+                            <h3>Upcoming Classes (Các Lớp Khai Giảng Tháng Tới)</h3>
+                        </div>
+                        <table class="schedule-table">
+                            <thead>
+                                <tr>
+                                    <th>Lớp Học</th>
+                                    <th>Ngày Khai Giảng</th>
+                                    <th>Thời Gian Học</th>
+                                    <th>Ưu Đãi Đăng Ký Sớm</th>
+                                    <th>Hành Động</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="class-name">Huấn luyện Chó Trị Liệu & Cứu Hộ <br><span class="class-instructor">GV. Quốc Anh</span></td>
+                                    <td>15 / 06 / 2026</td>
+                                    <td class="class-time">Thứ 7 & CN (09:00)</td>
+                                    <td><span class="class-spots">Giảm 10% học phí</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Đăng ký trước</a></td>
+                                </tr>
+                                <tr>
+                                    <td class="class-name">Chương trình Dã ngoại Huấn luyện Đỉnh cao <br><span class="class-instructor">Happy Paws Team</span></td>
+                                    <td>28 / 06 / 2026</td>
+                                    <td class="class-time">3 Ngày 2 Đêm dã ngoại</td>
+                                    <td><span class="class-spots">Tặng kèm Bát ăn gỗ</span></td>
+                                    <td><a href="#contact" class="chalkboard-btn">Đăng ký trước</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             7. CUSTOMER TESTIMONIALS SECTION (5 STAR CARDS GRID)
+             ================================================================ -->
+        <section id="testimonials" class="testimonials-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-tag">Khách hàng nói gì</span>
+                    <h2 class="section-title">Câu Chuyện Hạnh Phúc</h2>
+                    <p class="section-subtitle">Không gì tự hào hơn việc chứng kiến nụ cười mãn nguyện và cuộc sống hạnh phúc của cún cưng cùng chủ nuôi.</p>
+                </div>
+
+                <div class="testimonials-grid">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card fade-in-up delay-100">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Bé Corgi nhà tôi từng rất hay sủa bậy và cắn phá giày dép. Sau khóa học Puppy Preschool tại Happy Paws, cháu đã hoàn toàn thay đổi. Đi vệ sinh đúng chỗ 100% và cực kỳ nghe lời chủ."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?q=80&w=150&auto=format&fit=crop" alt="Chị Lan Anh">
+                            </div>
+                            <div class="author-meta">
+                                <h5>Chị Lan Anh</h5>
+                                <span>Chủ nuôi bé Corgi (Milo)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 2 -->
+                    <div class="testimonial-card fade-in-up delay-200">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Rocky là dòng Husky khá cứng đầu và kéo xích rất dữ mỗi khi đi dạo. Các giáo viên tại Happy Paws đã kiên trì hướng dẫn với giáo án Private 1-1, giờ tôi đã thoải mái dắt cún bằng 1 tay."
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=150&auto=format&fit=crop" alt="Anh Tuấn Minh">
+                            </div>
+                            <div class="author-meta">
+                                <h5>Anh Tuấn Minh</h5>
+                                <span>Chủ nuôi bé Husky (Rocky)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div class="testimonial-card fade-in-up delay-300">
+                        <div class="testimonial-stars">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="testimonial-text">
+                            "Khóa Board & Train vô cùng xứng đáng đồng tiền. Chú chó Golden của tôi không chỉ ngoan hơn mà còn được chăm sóc rất chu đáo, mượt lông và tăng cân đều đặn. Cực kỳ tin tưởng Happy Paws!"
+                        </p>
+                        <div class="testimonial-author">
+                            <div class="testimonial-avatar">
+                                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=150&auto=format&fit=crop" alt="Chị Hà Phương">
+                            </div>
+                            <div class="author-meta">
+                                <h5>Chị Hà Phương</h5>
+                                <span>Chủ nuôi bé Golden (Nunu)</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             8. BLOG SECTION (SLIDER CAROUSEL WITH DYNAMIC TEXTS)
+             ================================================================ -->
+        <section id="blog" class="blog-section">
+            <div class="container">
+                <div class="section-header fade-in-up">
+                    <span class="section-tag">Góc chia sẻ kiến thức</span>
+                    <h2 class="section-title">Cẩm Nang Thú Cưng</h2>
+                    <p class="section-subtitle">Cập nhật các bí quyết chăm sóc, huấn luyện và thấu hiểu tâm sinh lý hành vi cún cưng hữu ích.</p>
+                </div>
+
+                <!-- Carousel Slider list -->
+                <div class="blog-carousel-wrapper fade-in-up delay-100">
+                    <div class="blog-carousel" id="blog-slider">
+                        <!-- Blog Post 1 -->
+                        <article class="blog-card">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=600&auto=format&fit=crop" alt="Choosing a Collar">
+                            <div class="blog-card-overlay"></div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Huấn Luyện</span>
+                                <h3 class="blog-card-title"><a href="#">Cách Lựa Chọn Vòng Cổ Và Dây Dắt Phù Hợp Cho Từng Giống Chó</a></h3>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 2 -->
+                        <article class="blog-card">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1561037404-61cd96ad61db?q=80&w=600&auto=format&fit=crop" alt="Causes of Aggression">
+                            <div class="blog-card-overlay"></div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Tâm Lý</span>
+                                <h3 class="blog-card-title"><a href="#">Giải Mã Nguyên Nhân Gây Ra Sự Hung Dữ Đột Ngột Ở Chó Trưởng Thành</a></h3>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 3 -->
+                        <article class="blog-card">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1477884213960-b93d20d4672e?q=80&w=600&auto=format&fit=crop" alt="Building Relationships">
+                            <div class="blog-card-overlay"></div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Gắn Kết</span>
+                                <h3 class="blog-card-title"><a href="#">5 Bài Tập Đơn Giản Giúp Xây Dựng Tình Cảm Bền Chặt Với Cún</a></h3>
+                            </div>
+                        </article>
+
+                        <!-- Blog Post 4 -->
+                        <article class="blog-card">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=600&auto=format&fit=crop" alt="Dog Parks">
+                            <div class="blog-card-overlay"></div>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Xã Hội Hóa</span>
+                                <h3 class="blog-card-title"><a href="#">Lưu Ý Quan Trọng Khi Dắt Cún Đi Chơi Công Viên Công Cộng</a></h3>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Dot navigations generated dynamically or static below -->
+                    <div class="carousel-dots" id="slider-dots">
+                        <!-- Dots injected by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================================================================
+             9. CONSULTATION CTA SECTION (LUXURY CTA SPLIT GRID)
+             ================================================================ -->
+        <section id="contact" class="cta-section">
+            <div class="cta-container">
+                <div class="cta-grid">
+                    <!-- Left: Intelligent Cute Dog Image -->
+                    <div class="cta-image">
+                        <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=600&auto=format&fit=crop" alt="Chó dễ thương chờ tư vấn">
+                    </div>
+
+                    <!-- Middle: Warm Invitation Text -->
+                    <div class="cta-text">
+                        <h2 class="cta-title">Đặt Lịch Hẹn Tư Vấn Miễn Phí Hôm Nay</h2>
+                        <p class="section-subtitle" style="color: var(--color-text-muted); margin-top: 14px;">
+                            Các chuyên gia hành vi của Happy Paws sẽ trực tiếp đánh giá miễn phí tính cách cún cưng của bạn và đưa ra lộ trình phù hợp nhất.
+                        </p>
+                    </div>
+
+                    <!-- Right: Large Action Button -->
+                    <div class="cta-button-area">
+                        <a href="tel:0987654321" class="btn btn-primary btn-glow" style="padding: 20px 40px; font-size: 1.1rem; box-shadow: var(--shadow-deep);">
+                            <i class="fa-solid fa-phone-volume"></i> Request Consultation
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================================================================
+         10. FOOTER (LUXURIOUS DARK MODE SLATE)
+         ================================================================ -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <!-- Col 1: Brand Info -->
+                <div class="footer-col-about">
+                    <a href="#home" class="logo" style="color: #FFFFFF; font-size: 1.5rem; font-weight: 800; margin-bottom: 24px;">
+                        <i class="fa-solid fa-paw" style="color: var(--color-primary-medium);"></i>
+                        Happy Paws<span>.</span>
+                    </a>
+                    <p>
+                        Happy Paws Training Center hướng tới mục tiêu cung cấp giải pháp giáo dục hành vi động vật khoa học, đầy tính văn minh và nhân đạo hàng đầu Việt Nam.
+                    </p>
+                    <div class="footer-socials">
+                        <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="#" class="social-icon" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
+                    </div>
+                </div>
+
+                <!-- Col 2: Navigation Links -->
+                <div>
+                    <h4 class="footer-col-title">Chương Trình Đào Tạo</h4>
+                    <div class="footer-links">
+                        <a href="#services" class="footer-link">Puppy Preschool</a>
+                        <a href="#services" class="footer-link">Group Obedience</a>
+                        <a href="#services" class="footer-link">Private Lessons</a>
+                        <a href="#services" class="footer-link">Board & Train</a>
+                        <a href="#schedule" class="footer-link">Thời Khóa Biểu</a>
+                    </div>
+                </div>
+
+                <!-- Col 3: Contact Info -->
+                <div>
+                    <h4 class="footer-col-title">Trụ Sở Trung Tâm</h4>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span>123 Đường Thảo Điền, Phường Thảo Điền, Quận 2, TP. Hồ Chí Minh</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-phone"></i>
+                        <span>0987 654 321 / 028 1234 5678</span>
+                    </div>
+                    <div class="footer-contact-item">
+                        <i class="fa-solid fa-envelope"></i>
+                        <span>hello@happypaws.edu.vn</span>
+                    </div>
+                </div>
+
+                <!-- Col 4: Newsletter minimal sign up -->
+                <div>
+                    <h4 class="footer-col-title">Nhận Ưu Đãi Đăng Ký</h4>
+                    <p class="newsletter-desc">Đăng ký email để nhận ngay voucher giảm giá 10% các khóa đào tạo khai giảng sớm.</p>
+                    <form class="newsletter-form" action="#" onsubmit="alert('Cảm ơn bạn đã đăng ký nhận tin!'); return false;">
+                        <input type="email" class="newsletter-input" placeholder="Địa chỉ email của bạn" required aria-label="Địa chỉ email nhận tin">
+                        <button type="submit" class="newsletter-btn" aria-label="Gửi email đăng ký"><i class="fa-solid fa-paper-plane"></i></button>
+                    </form>
+                </div>
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="footer-bottom">
+                <p>&copy; 2026 Happy Paws Training Center. Bảo lưu mọi quyền hành vi.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Chính sách bảo mật</a>
+                    <a href="#">Điều khoản sử dụng</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================================================================
+         11. FLOATING CONTROL BUTTONS
+         ================================================================ -->
+    <!-- Scroll To Top Button -->
+    <a href="#home" class="scroll-top" id="back-to-top" aria-label="Cuộn lên đầu trang">
+        <i class="fa-solid fa-chevron-up"></i>
+    </a>
+
+    <!-- Core Javascript controllers -->
+    <script src="script.js"></script>
+</body>
+</html>

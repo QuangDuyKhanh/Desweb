@@ -1,0 +1,59 @@
+# ================================================================
+#  HAPPY PAWS - .gitignore
+#  Lọc và bảo vệ các tệp nhạy cảm, không cần thiết khỏi GitHub
+# ================================================================
+
+# --- Hệ thống & Môi trường ---
+.DS_Store
+Thumbs.db
+desktop.ini
+*.lnk
+
+# --- Editor & IDE ---
+.vscode/
+.idea/
+*.suo
+*.user
+*.swp
+*~
+
+# --- Biến môi trường & Khóa bí mật ---
+# QUAN TRỌNG: Không bao giờ commit các tệp chứa API key, mật khẩu!
+.env
+.env.local
+.env.production
+.env.*.local
+*.key
+*.pem
+*.p12
+secrets.json
+config.local.js
+
+# --- Node.js (nếu dùng trong tương lai) ---
+node_modules/
+npm-debug.log*
+yarn-error.log*
+package-lock.json
+
+# --- Build Output ---
+dist/
+build/
+.cache/
+.parcel-cache/
+
+# --- Logs ---
+logs/
+*.log
+
+# --- Tệp tạm thời ---
+tmp/
+temp/
+*.tmp
+*.bak
+*.orig
+
+# --- Tệp nén ---
+*.zip
+*.rar
+*.7z
+*.tar.gz

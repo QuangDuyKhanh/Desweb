@@ -56,10 +56,14 @@
                     <a href="#blog" class="nav-link">Blog</a>
                 </nav>
 
-                <!-- Right Side: Search & CTA Action -->
+                <!-- Right Side: Search, Login & CTA Action -->
                 <div class="header-actions">
                     <button class="search-btn" id="search-trigger" aria-label="Tìm kiếm">
                         <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <!-- UPDATED: Added Premium Login Button -->
+                    <button class="login-trigger-btn" id="login-trigger" aria-label="Đăng nhập">
+                        <i class="fa-solid fa-user"></i> Login
                     </button>
                     <a href="#contact" class="btn btn-primary btn-glow">Book Consultation</a>
                     
@@ -83,6 +87,67 @@
         </form>
     </div>
 
+    <!-- UPDATED: Premium Glassmorphic Login/Register Modal Popup -->
+    <div class="auth-overlay" id="auth-container">
+        <div class="auth-modal">
+            <div class="auth-close" id="auth-close"><i class="fa-solid fa-xmark"></i></div>
+            
+            <!-- Tabs để chuyển đổi Đăng nhập / Đăng ký -->
+            <div class="auth-tabs">
+                <button class="auth-tab-btn active" id="tab-login-btn">Đăng Nhập</button>
+                <button class="auth-tab-btn" id="tab-register-btn">Đăng Ký</button>
+            </div>
+
+            <!-- Form Đăng Nhập -->
+            <form class="auth-form visible" id="login-form" action="#" method="POST">
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" placeholder="Email của bạn" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" placeholder="Mật khẩu" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox"> Ghi nhớ đăng nhập
+                    </label>
+                    <a href="#" class="forgot-pass">Quên mật khẩu?</a>
+                </div>
+                <button type="submit" class="btn btn-primary w-full text-center btn-glow">Đăng Nhập</button>
+            </form>
+
+            <!-- Form Đăng Ký (Ẩn mặc định) -->
+            <form class="auth-form" id="register-form" action="#" method="POST" style="display: none;">
+                <div class="input-group">
+                    <i class="fa-solid fa-user input-icon"></i>
+                    <input type="text" placeholder="Họ và tên của bạn" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-envelope input-icon"></i>
+                    <input type="email" placeholder="Địa chỉ Email" required>
+                </div>
+                <div class="input-group">
+                    <i class="fa-solid fa-lock input-icon"></i>
+                    <input type="password" placeholder="Mật khẩu (tối thiểu 6 ký tự)" required>
+                </div>
+                <div class="form-options">
+                    <label class="remember-me">
+                        <input type="checkbox" required> Tôi đồng ý với điều khoản dịch vụ
+                    </label>
+                </div>
+                <button type="submit" class="btn btn-primary w-full text-center btn-glow">Tạo Tài Khoản</button>
+            </form>
+
+            <!-- Đăng nhập nhanh bằng MXH -->
+            <div class="auth-divider"><span>Hoặc tiếp tục với</span></div>
+            <div class="social-login-grid">
+                <a href="#" class="social-login-item google"><i class="fa-brands fa-google"></i> Google</a>
+                <a href="#" class="social-login-item facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
+            </div>
+        </div>
+    </div>
+
     <!-- Mobile Navigation Drawer -->
     <div class="mobile-menu-backdrop" id="menu-backdrop"></div>
     <div class="mobile-nav" id="mobile-navigation">
@@ -95,6 +160,8 @@
             <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
             <a href="#blog" class="mobile-nav-link">Blog</a>
             <a href="#contact" class="mobile-nav-link">Contact</a>
+            <!-- UPDATED: Mobile Login Link -->
+            <a href="#" class="mobile-nav-link" id="mobile-login-trigger"><i class="fa-solid fa-user"></i> Đăng Nhập / Đăng Ký</a>
         </nav>
         <div class="mobile-nav-bottom">
             <a href="#contact" class="btn btn-primary w-full text-center">Book Consultation</a>
@@ -837,6 +904,62 @@
     <a href="#home" class="scroll-top" id="back-to-top" aria-label="Cuộn lên đầu trang">
         <i class="fa-solid fa-chevron-up"></i>
     </a>
+
+    <!-- ================================================================
+         AI ASSISTANT CHAT WIDGET (TƯ VẤN VIÊN AI 24/7)
+         ================================================================ -->
+    <!-- Nút bong bóng chat cố định góc màn hình -->
+    <div class="ai-chat-badge animate-float" id="ai-chat-trigger" title="Trò chuyện với AI tư vấn viên">
+        <div class="ai-badge-pulse"></div>
+        <i class="fa-solid fa-robot"></i>
+        <span class="ai-badge-text">AI 24/7</span>
+    </div>
+
+    <!-- Hộp thoại khung chat chính -->
+    <div class="ai-chat-window" id="ai-chat-window">
+        <!-- Đầu khung chat -->
+        <div class="ai-chat-header">
+            <div class="ai-avatar-status">
+                <div class="ai-avatar">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span class="status-dot"></span>
+                </div>
+                <div class="ai-name-info">
+                    <h4>Pawsie Assistant</h4>
+                    <p>Tư vấn viên AI trực tuyến 24/7</p>
+                </div>
+            </div>
+            <button class="ai-chat-close" id="ai-chat-close" aria-label="Đóng chat">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+        </div>
+
+        <!-- Vùng hiển thị nội dung tin nhắn -->
+        <div class="ai-chat-body" id="ai-chat-messages">
+            <!-- Tin nhắn chào mừng mặc định của AI -->
+            <div class="msg-wrapper ai">
+                <div class="msg-bubble">
+                    Gâu! Xin chào! Tôi là **Pawsie**, chuyên viên tư vấn AI của Happy Paws. 🐾<br><br>
+                    Tôi có thể giúp bạn tìm hiểu nhanh về các **Dịch vụ Spa cún cưng** hoặc các **Chương trình ưu đãi** hiện có. Bạn cần tôi hỗ trợ gì ạ?
+                </div>
+            </div>
+        </div>
+
+        <!-- Vùng các nút gợi ý nhanh (Quick Replies) giúp khách click lẹ -->
+        <div class="ai-chat-suggestions">
+            <button class="suggest-btn" data-query="Menu dịch vụ Spa gồm những gì?">✂️ Dịch vụ Spa</button>
+            <button class="suggest-btn" data-query="Hiện tại có chương trình ưu đãi gì mới không?">🎁 Khuyến mãi hot</button>
+            <button class="suggest-btn" data-query="Giá tắm vệ sinh trọn gói bao nhiêu?">💰 Bảng giá Spa</button>
+        </div>
+
+        <!-- Ô nhập tin nhắn phía dưới cùng -->
+        <div class="ai-chat-footer">
+            <input type="text" id="ai-chat-input" placeholder="Hỏi Pawsie về Spa & Ưu đãi..." autocomplete="off">
+            <button id="ai-chat-send" aria-label="Gửi">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- Core Javascript controllers -->
     <script src="script.js"></script>

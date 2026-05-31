@@ -1,10 +1,6 @@
-/* 
-================================================================
-   HAPPY PAWS TRAINING CENTER - PREMIUM INTERACTION SCRIPT
+﻿/* HAPPY PAWS TRAINING CENTER - PREMIUM INTERACTION SCRIPT
    UI/UX Engine: Pure ES6 Javascript (No Heavy External Libraries)
-   Author: Senior UI/UX Designer & Frontend Developer
-================================================================
-*/
+   Author: Senior UI/UX Designer & Frontend Developer */
 
 document.addEventListener('DOMContentLoaded', () => {
     // Tự động phát hiện môi trường Chrome Extension và gán class vào body
@@ -15,9 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Khai báo khuyết danh cho trình đóng menu để tránh lỗi ReferenceError ở phạm vi ngoài
     let closeMenu = () => {};
 
-    // ================================================================
     // 1. CHÀO & TỰ ĐỘNG TẮT MÀN HÌNH LOADING (PREMIUM LOADER)
-    // ================================================================
     const loader = document.getElementById('loader');
     if (loader) {
         window.addEventListener('load', () => {
@@ -40,9 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     }
 
-    // ================================================================
     // 2. DYNAMIC STICKY HEADER
-    // ================================================================
     const header = document.getElementById('main-header');
     if (header) {
         const scrollThreshold = 50;
@@ -59,9 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         handleScrollHeader(); // Gọi ngay lập tức phòng trường hợp F5 giữa trang
     }
 
-    // ================================================================
     // 3. MOBILE MENU CONTROLLER (BURGER NAVIGATION)
-    // ================================================================
     const hamburger = document.getElementById('hamburger-menu');
     const mobileNav = document.getElementById('mobile-navigation');
     const menuBackdrop = document.getElementById('menu-backdrop');
@@ -104,9 +94,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================================================
     // 4. OVERLAY SEARCH CONTROLLER
-    // ================================================================
     const searchTrigger = document.getElementById('search-trigger');
     const searchClose = document.getElementById('search-close');
     const searchContainer = document.getElementById('search-container');
@@ -134,9 +122,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================================================
     // 5. INTERSECTION OBSERVER FOR HIGH PERFORMANCE SCROLL ANIMATIONS
-    // ================================================================
     const animatedElements = document.querySelectorAll('.fade-in-up');
 
     const animationObserver = new IntersectionObserver((entries, observer) => {
@@ -156,9 +142,7 @@ document.addEventListener('DOMContentLoaded', () => {
         animationObserver.observe(el);
     });
 
-    // ================================================================
     // 6. CHALKBOARD SCHEDULE TABS SWITCHER (INTERACTIVE CLASSES)
-    // ================================================================
     const tabButtons = document.querySelectorAll('.schedule-tab');
     const panels = document.querySelectorAll('.schedule-panel');
 
@@ -181,9 +165,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ================================================================
     // 7. TOUCH-FRIENDLY BLOG SLIDER CAROUSEL (JS CAROUSEL PRO)
-    // ================================================================
     const slider = document.getElementById('blog-slider');
     const dotsContainer = document.getElementById('slider-dots');
     const cards = slider ? slider.querySelectorAll('.blog-card') : [];
@@ -320,9 +302,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================================================
     // 8. BACK TO TOP BUTTON WITH SCROLL MONITORING
-    // ================================================================
     const backToTopBtn = document.getElementById('back-to-top');
     const scrollDisplayThreshold = 400;
 
@@ -336,9 +316,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================================================
     // 9. ACTIVE LINK HIGHLIGHTER ON SCROLL (ONE-PAGE ARCHITECTURE)
-    // ================================================================
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('section');
 
@@ -366,9 +344,7 @@ document.addEventListener('DOMContentLoaded', () => {
     window.addEventListener('scroll', highlightActiveLink);
     highlightActiveLink();
 
-    // ================================================================
     // 10. PREMIUM GLASSMORPHIC LOGIN/REGISTER POPUP CONTROLLER
-    // ================================================================
     const loginTrigger = document.getElementById('login-trigger');
     const mobileLoginTrigger = document.getElementById('mobile-login-trigger');
     const authContainer = document.getElementById('auth-container');
@@ -512,9 +488,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3200);
     };
 
-    // ================================================================
     // 11. AI ASSISTANT CHAT WIDGET CONTROLLER (PAWSIE ASSISTANT)
-    // ================================================================
     const aiChatTrigger = document.getElementById('ai-chat-trigger');
     const aiChatWindow = document.getElementById('ai-chat-window');
     const aiChatClose = document.getElementById('ai-chat-close');
@@ -658,9 +632,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // ================================================================
     // 12. FORM SUBMISSION EMULATION (TOAST NOTIFICATIONS)
-    // ================================================================
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {
             e.preventDefault();
@@ -681,3 +653,4 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 });
+

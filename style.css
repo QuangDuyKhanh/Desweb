@@ -1,10 +1,6 @@
-/* 
-================================================================
-   HAPPY PAWS TRAINING CENTER - PREMIUM STYLE STYLESHEET
+﻿/* HAPPY PAWS TRAINING CENTER - PREMIUM STYLE STYLESHEET
    UI/UX Design Concept: Minimal Luxury & Premium Pet Services (2026 Edition)
-   Author: Senior UI/UX Designer & Frontend Developer
-================================================================
-*/
+   Author: Senior UI/UX Designer & Frontend Developer */
 
 /* --- Google Fonts --- */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fredoka:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
@@ -59,9 +55,7 @@
     --transition-fast: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-/* ================================================================
-   1. GLOBAL RESET & BASE STYLES
-   ================================================================ */
+/* 1. GLOBAL RESET & BASE STYLES */
 *, *::before, *::after {
     box-sizing: border-box;
     margin: 0;
@@ -165,9 +159,7 @@ section {
     color: var(--color-text-muted);
 }
 
-/* ================================================================
-   2. REUSABLE COMPONENTS & BUTTONS
-   ================================================================ */
+/* 2. REUSABLE COMPONENTS & BUTTONS */
 
 /* Premium Buttons */
 .btn {
@@ -258,9 +250,7 @@ section {
     background: var(--color-primary-medium);
 }
 
-/* ================================================================
-   3. ANIMATIONS & TRANSITIONS
-   ================================================================ */
+/* 3. ANIMATIONS & TRANSITIONS */
 @keyframes glow-pulse {
     0%, 100% {
         box-shadow: 0 4px 14px rgba(15, 118, 110, 0.2);
@@ -313,9 +303,7 @@ section {
 .delay-300 { transition-delay: 0.3s; }
 .delay-400 { transition-delay: 0.4s; }
 
-/* ================================================================
-   4. LAYOUT SECTIONS
-   ================================================================ */
+/* 4. LAYOUT SECTIONS */
 
 /* --- LOADING SCREEN --- */
 #loader {
@@ -404,9 +392,7 @@ section {
     box-shadow: var(--shadow-deep);
 }
 
-/* ================================================================
-   5. HEADER / NAVIGATION
-   ================================================================ */
+/* 5. HEADER / NAVIGATION */
 .header-wrapper {
     position: absolute;
     top: 0;
@@ -602,9 +588,7 @@ header.sticky {
     transition: var(--transition-smooth);
 }
 
-/* ================================================================
-   6. HERO BANNER
-   ================================================================ */
+/* 6. HERO BANNER */
 .hero-section {
     min-height: 100vh;
     padding-top: 160px;
@@ -805,9 +789,7 @@ header.sticky {
     color: var(--color-text-muted);
 }
 
-/* ================================================================
-   7. SERVICES SECTION
-   ================================================================ */
+/* 7. SERVICES SECTION */
 .services-section {
     background-color: var(--color-bg-secondary);
 }
@@ -927,9 +909,7 @@ header.sticky {
     margin-top: 8px;
 }
 
-/* ================================================================
-   8. WHY CHOOSE US
-   ================================================================ */
+/* 8. WHY CHOOSE US */
 .why-section {
     background-color: var(--color-bg-primary);
 }
@@ -1001,9 +981,7 @@ header.sticky {
     color: var(--color-text-muted);
 }
 
-/* ================================================================
-   9. TRAINING BENEFITS
-   ================================================================ */
+/* 9. TRAINING BENEFITS */
 .benefits-section {
     background-color: var(--color-bg-secondary);
 }
@@ -1125,9 +1103,7 @@ header.sticky {
     object-position: center 20%;
 }
 
-/* ================================================================
-   10. SCHEDULE & CLASSES
-   ================================================================ */
+/* 10. SCHEDULE & CLASSES */
 .schedule-section {
     background-color: var(--color-primary-light);
 }
@@ -1321,9 +1297,7 @@ header.sticky {
     transform: rotate(-2deg);
 }
 
-/* ================================================================
-   11. CUSTOMER TESTIMONIALS
-   ================================================================ */
+/* 11. CUSTOMER TESTIMONIALS */
 .testimonials-section {
     background-color: var(--color-bg-secondary);
 }
@@ -1392,9 +1366,7 @@ header.sticky {
     border-color: rgba(15, 118, 110, 0.1);
 }
 
-/* ================================================================
-   12. BLOG SECTION
-   ================================================================ */
+/* 12. BLOG SECTION */
 .blog-section {
     background-color: var(--color-bg-primary);
 }
@@ -1513,9 +1485,7 @@ header.sticky {
     background-color: var(--color-primary);
 }
 
-/* ================================================================
-   13. CONSULTATION CTA
-   ================================================================ */
+/* 13. CONSULTATION CTA */
 .cta-section {
     padding: 0;
     background-color: var(--color-bg-secondary);
@@ -1568,9 +1538,7 @@ header.sticky {
     justify-content: flex-end;
 }
 
-/* ================================================================
-   14. FOOTER
-   ================================================================ */
+/* 14. FOOTER */
 footer {
     background-color: var(--color-text-dark);
     color: #E2E8F0;
@@ -1738,9 +1706,7 @@ footer {
     color: var(--color-primary-medium);
 }
 
-/* ================================================================
-   15. MOBILE NAVIGATION MENU (FULL SCREEN)
-   ================================================================ */
+/* 15. MOBILE NAVIGATION MENU (FULL SCREEN) */
 .mobile-nav {
     position: fixed;
     top: 0;
@@ -1833,9 +1799,7 @@ footer {
     pointer-events: auto;
 }
 
-/* ================================================================
-   16. RESPONSIVE DESIGN (MEDIA QUERIES)
-   ================================================================ */
+/* 16. RESPONSIVE DESIGN (MEDIA QUERIES) */
 
 /* --- Retina / 4K / Ultra-wide --- */
 @media (min-width: 1600px) {
@@ -2018,9 +1982,7 @@ footer {
     }
 }
 
-/* ================================================================
-   12. CHROME EXTENSION POPUP STYLES (.chrome-extension-mode)
-   ================================================================ */
+/* 12. CHROME EXTENSION POPUP STYLES (.chrome-extension-mode) */
 body.chrome-extension-mode {
     width: 450px;
     height: 600px;
@@ -2191,9 +2153,7 @@ body.chrome-extension-mode footer .footer-grid {
     grid-template-columns: 1fr;
     gap: 30px;
 }
-/* ================================================================
-   12. PREMIUM GLASSMORPHIC LOGIN/REGISTER MODAL STYLES (CUSTOM CUSTOMER SPEC)
-   ================================================================ */
+/* 12. PREMIUM GLASSMORPHIC LOGIN/REGISTER MODAL STYLES (CUSTOM CUSTOMER SPEC) */
 /* Login Button Header Style - Colorized & Premium */
 .login-trigger-btn {
     background: var(--color-primary-light);
@@ -2368,9 +2328,7 @@ body.chrome-extension-mode footer .footer-grid {
     }
 }
 
-/* ================================================================
-   13. PREMIUM AI ASSISTANT CHAT WIDGET STYLES (PAWSIE ASSISTANT)
-   ================================================================ */
+/* 13. PREMIUM AI ASSISTANT CHAT WIDGET STYLES (PAWSIE ASSISTANT) */
 /* Nút bong bóng chat nổi ở góc dưới bên phải */
 .ai-chat-badge {
     position: fixed;
@@ -2622,6 +2580,7 @@ body.chrome-extension-mode footer .footer-grid {
     0%, 80%, 100% { transform: scale(0.6); opacity: 0.5; }
     40% { transform: scale(1.2); opacity: 1; }
 }
+
 
 
 

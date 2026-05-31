@@ -1,0 +1,21 @@
+{
+  "manifest_version": 3,
+  "name": "Happy Paws Dog Training",
+  "version": "1.0.0",
+  "description": "Trung tâm huấn luyện cún cưng chuyên nghiệp Happy Paws",
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": "assets/images/logo.png"
+  },
+  "icons": {
+    "16": "assets/images/logo.png",
+    "48": "assets/images/logo.png",
+    "128": "assets/images/logo.png"
+  },
+  "permissions": [
+    "activeTab"
+  ],
+  "host_permissions": [
+    "<all_urls>"
+  ]
+}

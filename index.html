@@ -48,7 +48,6 @@
                 <!-- Middle: Navigation Links -->
                 <nav class="nav-menu" id="desktop-menu">
                     <a href="#home" class="nav-link active">Home</a>
-                    <a href="#press" class="nav-link" style="color: var(--color-primary); font-weight: 600;">Press</a>
                     <a href="#services" class="nav-link">Services</a>
                     <a href="#why-choose" class="nav-link">Why Us</a>
                     <a href="#benefits" class="nav-link">Benefits</a>
@@ -62,6 +61,7 @@
                     <button class="search-btn" id="search-trigger" aria-label="Tìm kiếm">
                         <i class="fa-solid fa-magnifying-glass"></i>
                     </button>
+                    <!-- UPDATED: Added Premium Login Button -->
                     <button class="login-trigger-btn" id="login-trigger" aria-label="Đăng nhập">
                         <i class="fa-solid fa-user"></i> Login
                     </button>
@@ -81,18 +81,18 @@
     <!-- Full Screen Search Overlay -->
     <div class="search-overlay" id="search-container">
         <div class="search-close" id="search-close"><i class="fa-solid fa-xmark"></i></div>
-        <form class="search-form" action="#" method="GET" onsubmit="alert('Đang tìm kiếm...'); return false;">
+        <form class="search-form" action="#" method="GET">
             <input type="text" class="search-input" placeholder="Tìm kiếm dịch vụ, lịch học..." required>
             <button type="submit" class="search-form-btn" aria-label="Thực hiện tìm kiếm"><i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
     </div>
 
-    <!-- Premium Glassmorphic Login/Register Modal Popup -->
+    <!-- UPDATED: Premium Glassmorphic Login/Register Modal Popup -->
     <div class="auth-overlay" id="auth-container">
         <div class="auth-modal">
             <div class="auth-close" id="auth-close"><i class="fa-solid fa-xmark"></i></div>
             
-            <!-- Tabs -->
+            <!-- Tabs để chuyển đổi Đăng nhập / Đăng ký -->
             <div class="auth-tabs">
                 <button class="auth-tab-btn active" id="tab-login-btn">Đăng Nhập</button>
                 <button class="auth-tab-btn" id="tab-register-btn">Đăng Ký</button>
@@ -140,7 +140,7 @@
             </form>
 
             <!-- Đăng nhập nhanh bằng MXH -->
-            <div class="auth-divider"><span>Hoặc tiếp tục vớiiii</span></div>
+            <div class="auth-divider"><span>Hoặc tiếp tục với</span></div>
             <div class="social-login-grid">
                 <a href="#" class="social-login-item google"><i class="fa-brands fa-google"></i> Google</a>
                 <a href="#" class="social-login-item facebook"><i class="fa-brands fa-facebook"></i> Facebook</a>
@@ -153,13 +153,14 @@
     <div class="mobile-nav" id="mobile-navigation">
         <nav class="mobile-nav-menu">
             <a href="#home" class="mobile-nav-link active">Home</a>
-            <a href="#press" class="mobile-nav-link" style="color: var(--color-primary);">Press</a>
             <a href="#services" class="mobile-nav-link">Services</a>
             <a href="#why-choose" class="mobile-nav-link">Why Us</a>
             <a href="#benefits" class="mobile-nav-link">Benefits</a>
             <a href="#schedule" class="mobile-nav-link">Schedule</a>
             <a href="#testimonials" class="mobile-nav-link">Testimonials</a>
             <a href="#blog" class="mobile-nav-link">Blog</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <!-- UPDATED: Mobile Login Link -->
             <a href="#" class="mobile-nav-link" id="mobile-login-trigger"><i class="fa-solid fa-user"></i> Đăng Nhập / Đăng Ký</a>
         </nav>
         <div class="mobile-nav-bottom">
@@ -184,10 +185,10 @@
                         <i class="fa-solid fa-award"></i> Đạt chuẩn Đào tạo Premium 2026
                     </div>
                     <h1 class="hero-title">
-                        Huấn Luyện Chó<br><span>Chuyên Nghiệp</span>
+                        Professional<br><span>Dog Training</span>
                     </h1>
                     <p class="hero-subtitle">
-                        Chào mừng bạn đến với Happy Paws. Nơi chúng tôi xây dựng sự kết nối tuyệt vời giữa bạn và cún cưng bằng phương pháp khoa học hiện đại chuẩn xu hướng 2026.
+                        Phương pháp huấn luyện tích cực, dựa trên phần thưởng giúp cún yêu của bạn phát triển toàn diện, ngoan ngoãn và hạnh phúc nhất.
                     </p>
                     <div class="hero-buttons">
                         <a href="#contact" class="btn btn-primary btn-glow">Book Consultation</a>
@@ -242,51 +243,6 @@
         </section>
 
         <!-- ================================================================
-             2B. PRESS MENTIONS SECTION (FEATURED IN & PARTNERS)
-             ================================================================ -->
-        <section id="press" style="padding: 4rem 2rem; background: #FFFFFF; border-top: 1px solid #E2E8F0; border-bottom: 1px solid #E2E8F0;">
-            <div style="max-width: 1200px; margin: 0 auto;">
-                <!-- Tiêu đề phụ chuẩn thương hiệu cao cấp -->
-                <p style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.75rem; color: #94A3B8; text-align: center; margin-bottom: 2.5rem; font-weight: 700;">
-                    ✦ Featured In & Partners ✦
-                </p>
-                
-                <!-- Lưới hiển thị các thẻ bài báo -->
-                <div id="press-grid-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 2rem;">
-                    <!-- Static fallback items, will be populated or styled dynamically via script.js -->
-                    <div class="press-card" data-id="1" style="padding: 2rem 1.5rem; border-radius: 16px; background: var(--color-bg-primary); border: 1px solid #F1F5F9; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); text-align: center; cursor: pointer;">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
-                            <span style="background: #730024; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; font-family: var(--font-heading);">Vn</span>
-                            <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: #1E293B;">VnExpress</span>
-                        </div>
-                        <p style="font-size: 0.85rem; color: #475569; font-style: italic; line-height: 1.6; margin: 0;">"Happy Paws dẫn đầu xu hướng huấn luyện cún cưng kết hợp công nghệ hiện đại 2026."</p>
-                    </div>
-                    <div class="press-card" data-id="2" style="padding: 2rem 1.5rem; border-radius: 16px; background: var(--color-bg-primary); border: 1px solid #F1F5F9; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); text-align: center; cursor: pointer;">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
-                            <span style="background: #007F5C; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; font-family: var(--font-heading);">DT</span>
-                            <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: #1E293B;">Dân Trí</span>
-                        </div>
-                        <p style="font-size: 0.85rem; color: #475569; font-style: italic; line-height: 1.6; margin: 0;">"Môi trường nội trú và dạy kèm 1-1 chuẩn 5 sao dành cho thú cưng tại Việt Nam."</p>
-                    </div>
-                    <div class="press-card" data-id="3" style="padding: 2rem 1.5rem; border-radius: 16px; background: var(--color-bg-primary); border: 1px solid #F1F5F9; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); text-align: center; cursor: pointer;">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
-                            <span style="background: #D32F2F; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; font-family: var(--font-heading);">TT</span>
-                            <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: #1E293B;">Tuổi Trẻ</span>
-                        </div>
-                        <p style="font-size: 0.85rem; color: #475569; font-style: italic; line-height: 1.6; margin: 0;">"Phương pháp giáo dục nhân văn, giúp cún xóa bỏ các hành vi tiêu cực tự nhiên."</p>
-                    </div>
-                    <div class="press-card" data-id="4" style="padding: 2rem 1.5rem; border-radius: 16px; background: var(--color-bg-primary); border: 1px solid #F1F5F9; transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1); text-align: center; cursor: pointer;">
-                        <div style="display: flex; align-items: center; justify-content: center; gap: 0.5rem; margin-bottom: 1rem;">
-                            <span style="background: #F57C00; color: #fff; font-size: 0.75rem; font-weight: 800; padding: 4px 8px; border-radius: 6px; font-family: var(--font-heading);">K14</span>
-                            <span style="font-family: var(--font-heading); font-weight: 700; font-size: 1.2rem; color: #1E293B;">Kenh14</span>
-                        </div>
-                        <p style="font-size: 0.85rem; color: #475569; font-style: italic; line-height: 1.6; margin: 0;">"Cộng đồng mạng phát sốt với Trợ lý ảo AI Pawsie thông minh của trung tâm."</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ================================================================
              3. SERVICES SECTION (PREMIUM METICULOUS CARDS)
              ================================================================ -->
         <section id="services" class="services-section">
@@ -297,7 +253,7 @@
                     <p class="section-subtitle">Thiết kế lộ trình khoa học phù hợp với từng độ tuổi và tính cách đặc trưng của cún.</p>
                 </div>
 
-                <!-- Services Grid -->
+                <!-- Services Grid (Slider on mobile via custom script) -->
                 <div class="services-grid fade-in-up delay-100">
                     <!-- Service 1 -->
                     <div class="service-card">
@@ -364,6 +320,7 @@
 
                 <!-- Right Side Advantages Grid -->
                 <div class="why-features-grid fade-in-up delay-200">
+                    <!-- Item 1 -->
                     <div class="why-feature-item">
                         <div class="feature-icon-circle"><i class="fa-solid fa-award"></i></div>
                         <div class="feature-info">
@@ -371,6 +328,8 @@
                             <p>Huấn luyện động lực bằng mồi ngon và lời khen ngợi kích thích trí thông minh.</p>
                         </div>
                     </div>
+
+                    <!-- Item 2 -->
                     <div class="why-feature-item">
                         <div class="feature-icon-circle"><i class="fa-solid fa-sliders"></i></div>
                         <div class="feature-info">
@@ -378,6 +337,8 @@
                             <p>Tích hợp đa dạng phương pháp thích ứng hoàn hảo với từng giống chó.</p>
                         </div>
                     </div>
+
+                    <!-- Item 3 -->
                     <div class="why-feature-item">
                         <div class="feature-icon-circle"><i class="fa-solid fa-user-shield"></i></div>
                         <div class="feature-info">
@@ -385,6 +346,8 @@
                             <p>100% Huấn luyện viên có bằng cấp quốc tế APDT uy tín dày dạn kinh nghiệm.</p>
                         </div>
                     </div>
+
+                    <!-- Item 4 -->
                     <div class="why-feature-item">
                         <div class="feature-icon-circle"><i class="fa-solid fa-shield-dog"></i></div>
                         <div class="feature-info">
@@ -392,6 +355,8 @@
                             <p>Chuyên gia điều chỉnh các vấn đề tâm lý phức tạp như sợ hãi, hung dữ quá độ.</p>
                         </div>
                     </div>
+
+                    <!-- Item 5 -->
                     <div class="why-feature-item">
                         <div class="feature-icon-circle"><i class="fa-solid fa-star"></i></div>
                         <div class="feature-info">
@@ -399,6 +364,8 @@
                             <p>Hàng ngàn phản hồi hạnh phúc từ các chủ nuôi sau khóa huấn luyện.</p>
                         </div>
                     </div>
+
+                    <!-- Item 6 -->
                     <div class="why-feature-item">
                         <div class="feature-icon-circle"><i class="fa-solid fa-leaf"></i></div>
                         <div class="feature-info">
@@ -424,6 +391,7 @@
                 <div class="benefits-layout">
                     <!-- Left Columns (3 Benefits) -->
                     <div class="benefits-column benefits-left fade-in-up delay-100">
+                        <!-- Benefit 1 -->
                         <div class="benefit-card">
                             <div class="benefit-icon"><i class="fa-solid fa-hands-clapping"></i></div>
                             <div class="benefit-text-box">
@@ -431,6 +399,8 @@
                                 <p class="benefit-desc">Cún không còn vồ vập, nhảy chồm lên người khi đón khách hoặc gặp người lạ ngoài đường.</p>
                             </div>
                         </div>
+
+                        <!-- Benefit 2 -->
                         <div class="benefit-card">
                             <div class="benefit-icon"><i class="fa-solid fa-shoe-prints"></i></div>
                             <div class="benefit-text-box">
@@ -438,6 +408,8 @@
                                 <p class="benefit-desc">Đi dạo thong thả, không kéo dây xích, luôn đi sát gót chân chủ một cách điềm tĩnh.</p>
                             </div>
                         </div>
+
+                        <!-- Benefit 3 -->
                         <div class="benefit-card">
                             <div class="benefit-icon"><i class="fa-solid fa-scissors"></i></div>
                             <div class="benefit-text-box">
@@ -447,7 +419,7 @@
                         </div>
                     </div>
 
-                    <!-- Center Dog Picture -->
+                    <!-- Center Dog Picture display with dynamic rotating circle -->
                     <div class="benefits-center fade-in-up delay-200">
                         <div class="benefits-center-circle"></div>
                         <div class="benefits-dog-img">
@@ -457,6 +429,7 @@
 
                     <!-- Right Columns (3 Benefits) -->
                     <div class="benefits-column benefits-right fade-in-up delay-300">
+                        <!-- Benefit 4 -->
                         <div class="benefit-card">
                             <div class="benefit-icon"><i class="fa-solid fa-tree"></i></div>
                             <div class="benefit-text-box">
@@ -464,6 +437,8 @@
                                 <p class="benefit-desc">Lắng nghe tuyệt đối hiệu lệnh gọi quay lại (Recall) bất kể trong không gian mở xao nhãng.</p>
                             </div>
                         </div>
+
+                        <!-- Benefit 5 -->
                         <div class="benefit-card">
                             <div class="benefit-icon"><i class="fa-solid fa-utensils"></i></div>
                             <div class="benefit-text-box">
@@ -471,6 +446,8 @@
                                 <p class="benefit-desc">Nằm yên ngoan ngoãn dưới chân bàn khi bạn thưởng thức cà phê hay ăn uống tại nhà hàng.</p>
                             </div>
                         </div>
+
+                        <!-- Benefit 6 -->
                         <div class="benefit-card">
                             <div class="benefit-icon"><i class="fa-solid fa-eye"></i></div>
                             <div class="benefit-text-box">
@@ -494,24 +471,25 @@
                     <p class="section-subtitle">Chọn lớp học phù hợp nhất với giai đoạn phát triển của cún yêu và đăng ký giữ chỗ ngay hôm nay.</p>
                 </div>
 
-                <!-- Navigation Tabs -->
+                <!-- Navigation Tabs styled with premium pills -->
                 <div class="schedule-tabs fade-in-up">
                     <button class="schedule-tab active" data-target="panel-puppy">Puppy Preschool</button>
                     <button class="schedule-tab" data-target="panel-middle">Middle School</button>
                     <button class="schedule-tab" data-target="panel-finish">Finishing School</button>
                     <button class="schedule-tab" data-target="panel-upcoming">Upcoming Classes</button>
-                    <button class="schedule-tab" data-target="panel-server">Lịch Hệ Thống 🐾</button>
                 </div>
 
-                <!-- Chalkboard Wrapper -->
+                <!-- Chalkboard Wrapper with Oak Frame & SVG decorations -->
                 <div class="chalkboard-container fade-in-up delay-200">
                     
-                    <!-- SVG Drawings Decorations -->
+                    <!-- SVG Dog Bone Decoration -->
                     <div class="chalkboard-decor decor-bone">
                         <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M19 12a2.5 2.5 0 0 0 2.5-2.5v-1a2.5 2.5 0 0 0-5 0v.5a.5.5 0 0 1-.5.5H8a.5.5 0 0 1-.5-.5v-.5a2.5 2.5 0 0 0-5 0v1a2.5 2.5 0 0 0 4.2 1.8.5.5 0 0 1 .6 0A2.5 2.5 0 0 0 11.5 15a.5.5 0 0 1-.5-.5v-.5a2.5 2.5 0 0 0-5 0v1a2.5 2.5 0 0 0 2.5 2.5h8a2.5 2.5 0 0 0 2.5-2.5v-1a2.5 2.5 0 0 0-5 0v.5a.5.5 0 0 1-.5.5h-3" stroke-linecap="round"/>
                         </svg>
                     </div>
+
+                    <!-- SVG Toy Ball Rope Decoration -->
                     <div class="chalkboard-decor decor-toy">
                         <svg width="50" height="50" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <circle cx="12" cy="12" r="6" stroke-dasharray="2 2"/>
@@ -519,6 +497,8 @@
                             <path d="M12 2v4M12 18v4M2 12h4M18 12h4" stroke-linecap="round"/>
                         </svg>
                     </div>
+
+                    <!-- SVG Feeding Bowl Decoration -->
                     <div class="chalkboard-decor decor-bowl">
                         <svg width="45" height="45" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
                             <path d="M3 16h18v2a3 3 0 0 1-3 3H6a3 3 0 0 1-3-3v-2z" stroke-linecap="round"/>
@@ -662,31 +642,6 @@
                         </table>
                     </div>
 
-                    <!-- Panel 5: Lịch Hệ Thống (Server Live Data) -->
-                    <div class="schedule-panel" id="panel-server">
-                        <div class="chalkboard-header">
-                            <h3>Lịch học thực tế từ hệ thống Happy Paws 🐾</h3>
-                        </div>
-                        <table class="schedule-table">
-                            <thead>
-                                <tr>
-                                    <th>Lớp Học</th>
-                                    <th>Thời Gian</th>
-                                    <th>Huấn Luyện Viên</th>
-                                    <th>Trạng Thái</th>
-                                    <th>Hành Động</th>
-                                </tr>
-                            </thead>
-                            <tbody id="server-schedule-body">
-                                <tr>
-                                    <td colspan="5" style="text-align: center; color: rgba(255,255,255,0.7); padding: 30px;">
-                                        <i class="fa-solid fa-spinner fa-spin" style="margin-right: 10px;"></i> Đang tải dữ liệu lịch học từ server...
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-
                 </div>
             </div>
         </section>
@@ -703,6 +658,7 @@
                 </div>
 
                 <div class="testimonials-grid">
+                    <!-- Card 1 -->
                     <div class="testimonial-card fade-in-up delay-100">
                         <div class="testimonial-stars">
                             <i class="fa-solid fa-star"></i>
@@ -724,6 +680,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Card 2 -->
                     <div class="testimonial-card fade-in-up delay-200">
                         <div class="testimonial-stars">
                             <i class="fa-solid fa-star"></i>
@@ -745,6 +703,8 @@
                             </div>
                         </div>
                     </div>
+
+                    <!-- Card 3 -->
                     <div class="testimonial-card fade-in-up delay-300">
                         <div class="testimonial-stars">
                             <i class="fa-solid fa-star"></i>
@@ -781,57 +741,70 @@
                     <p class="section-subtitle">Cập nhật các bí quyết chăm sóc, huấn luyện và thấu hiểu tâm sinh lý hành vi cún cưng hữu ích.</p>
                 </div>
 
-                <!-- Carousel Slider -->
+                <!-- Carousel Slider list -->
                 <div class="blog-carousel-wrapper fade-in-up delay-100">
                     <div class="blog-carousel" id="blog-slider">
-                        <!-- Article 1 -->
+                        <!-- Blog Post 1 -->
                         <article class="blog-card">
                             <img class="blog-card-img" src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?q=80&w=600&auto=format&fit=crop" alt="Choosing a Collar">
                             <div class="blog-card-overlay"></div>
-                            <span class="blog-card-meta">Cẩm Nang Căn Bản</span>
-                            <h3 class="blog-card-title">Cách lựa chọn vòng cổ & dây xích phù hợp cho từng giống chó</h3>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Huấn Luyện</span>
+                                <h3 class="blog-card-title"><a href="#">Cách Lựa Chọn Vòng Cổ Và Dây Dắt Phù Hợp Cho Từng Giống Chó</a></h3>
+                            </div>
                         </article>
-                        <!-- Article 2 -->
+
+                        <!-- Blog Post 2 -->
                         <article class="blog-card">
-                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=600&auto=format&fit=crop" alt="Understanding Behavior">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1561037404-61cd96ad61db?q=80&w=600&auto=format&fit=crop" alt="Causes of Aggression">
                             <div class="blog-card-overlay"></div>
-                            <span class="blog-card-meta">Hành Vi Tâm Lý</span>
-                            <h3 class="blog-card-title">Hiểu đúng về tâm sinh lý cún cưng trong giai đoạn dậy thì</h3>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Tâm Lý</span>
+                                <h3 class="blog-card-title"><a href="#">Giải Mã Nguyên Nhân Gây Ra Sự Hung Dữ Đột Ngột Ở Chó Trưởng Thành</a></h3>
+                            </div>
                         </article>
-                        <!-- Article 3 -->
+
+                        <!-- Blog Post 3 -->
                         <article class="blog-card">
-                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1587300003388-59208cc962cb?q=80&w=600&auto=format&fit=crop" alt="Brain training">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1477884213960-b93d20d4672e?q=80&w=600&auto=format&fit=crop" alt="Building Relationships">
                             <div class="blog-card-overlay"></div>
-                            <span class="blog-card-meta">Mẹo Huấn Luyện</span>
-                            <h3 class="blog-card-title">Top 5 bài tập kích thích trí thông minh cho cún tại nhà</h3>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Gắn Kết</span>
+                                <h3 class="blog-card-title"><a href="#">5 Bài Tập Đơn Giản Giúp Xây Dựng Tình Cảm Bền Chặt Với Cún</a></h3>
+                            </div>
                         </article>
-                        <!-- Article 4 -->
+
+                        <!-- Blog Post 4 -->
                         <article class="blog-card">
-                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=600&auto=format&fit=crop" alt="Stop Barking">
+                            <img class="blog-card-img" src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?q=80&w=600&auto=format&fit=crop" alt="Dog Parks">
                             <div class="blog-card-overlay"></div>
-                            <span class="blog-card-meta">Sửa Hành Vi</span>
-                            <h3 class="blog-card-title">Giải pháp xử lý dứt điểm thói quen sủa bậy mất kiểm soát</h3>
+                            <div class="blog-card-content">
+                                <span class="blog-card-meta">Xã Hội Hóa</span>
+                                <h3 class="blog-card-title"><a href="#">Lưu Ý Quan Trọng Khi Dắt Cún Đi Chơi Công Viên Công Cộng</a></h3>
+                            </div>
                         </article>
                     </div>
 
-                    <!-- Dots indicator -->
-                    <div class="carousel-dots" id="slider-dots"></div>
+                    <!-- Dot navigations generated dynamically or static below -->
+                    <div class="carousel-dots" id="slider-dots">
+                        <!-- Dots injected by JS -->
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- ================================================================
-             9. CONSULTATION CTA SECTION (INTERACTIVE REQUEST)
+             9. CONSULTATION CTA SECTION (LUXURY CTA SPLIT GRID)
              ================================================================ -->
         <section id="contact" class="cta-section">
             <div class="cta-container">
                 <div class="cta-grid">
-                    <!-- Left -->
+                    <!-- Left: Intelligent Cute Dog Image -->
                     <div class="cta-image">
                         <img src="https://images.unsplash.com/photo-1534361960057-19889db9621e?q=80&w=600&auto=format&fit=crop" alt="Chó dễ thương chờ tư vấn">
                     </div>
 
-                    <!-- Middle -->
+                    <!-- Middle: Warm Invitation Text -->
                     <div class="cta-text">
                         <h2 class="cta-title">Đặt Lịch Hẹn Tư Vấn Miễn Phí Hôm Nay</h2>
                         <p class="section-subtitle" style="color: var(--color-text-muted); margin-top: 14px;">
@@ -839,7 +812,7 @@
                         </p>
                     </div>
 
-                    <!-- Right -->
+                    <!-- Right: Large Action Button -->
                     <div class="cta-button-area">
                         <a href="tel:0987654321" class="btn btn-primary btn-glow" style="padding: 20px 40px; font-size: 1.1rem; box-shadow: var(--shadow-deep);">
                             <i class="fa-solid fa-phone-volume"></i> Request Consultation
@@ -856,7 +829,7 @@
     <footer>
         <div class="container">
             <div class="footer-grid">
-                <!-- About -->
+                <!-- Col 1: Brand Info -->
                 <div class="footer-col-about">
                     <a href="#home" class="logo" style="color: #FFFFFF; font-size: 1.5rem; font-weight: 800; margin-bottom: 24px;">
                         <i class="fa-solid fa-paw" style="color: var(--color-primary-medium);"></i>
@@ -869,10 +842,11 @@
                         <a href="#" class="social-icon" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
                         <a href="#" class="social-icon" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
                         <a href="#" class="social-icon" aria-label="Youtube"><i class="fa-brands fa-youtube"></i></a>
+                        <a href="#" class="social-icon" aria-label="Tiktok"><i class="fa-brands fa-tiktok"></i></a>
                     </div>
                 </div>
 
-                <!-- Nav Links -->
+                <!-- Col 2: Navigation Links -->
                 <div>
                     <h4 class="footer-col-title">Chương Trình Đào Tạo</h4>
                     <div class="footer-links">
@@ -884,7 +858,7 @@
                     </div>
                 </div>
 
-                <!-- Contact -->
+                <!-- Col 3: Contact Info -->
                 <div>
                     <h4 class="footer-col-title">Trụ Sở Trung Tâm</h4>
                     <div class="footer-contact-item">
@@ -901,7 +875,7 @@
                     </div>
                 </div>
 
-                <!-- Newsletter -->
+                <!-- Col 4: Newsletter minimal sign up -->
                 <div>
                     <h4 class="footer-col-title">Nhận Ưu Đãi Đăng Ký</h4>
                     <p class="newsletter-desc">Đăng ký email để nhận ngay voucher giảm giá 10% các khóa đào tạo khai giảng sớm.</p>
@@ -931,7 +905,61 @@
         <i class="fa-solid fa-chevron-up"></i>
     </a>
 
+    <!-- ================================================================
+         AI ASSISTANT CHAT WIDGET (TƯ VẤN VIÊN AI 24/7)
+         ================================================================ -->
+    <!-- Nút bong bóng chat cố định góc màn hình -->
+    <div class="ai-chat-badge animate-float" id="ai-chat-trigger" title="Trò chuyện với AI tư vấn viên">
+        <div class="ai-badge-pulse"></div>
+        <i class="fa-solid fa-robot"></i>
+        <span class="ai-badge-text">AI 24/7</span>
+    </div>
 
+    <!-- Hộp thoại khung chat chính -->
+    <div class="ai-chat-window" id="ai-chat-window">
+        <!-- Đầu khung chat -->
+        <div class="ai-chat-header">
+            <div class="ai-avatar-status">
+                <div class="ai-avatar">
+                    <i class="fa-solid fa-user-astronaut"></i>
+                    <span class="status-dot"></span>
+                </div>
+                <div class="ai-name-info">
+                    <h4>Pawsie Assistant</h4>
+                    <p>Tư vấn viên AI trực tuyến 24/7</p>
+                </div>
+            </div>
+            <button class="ai-chat-close" id="ai-chat-close" aria-label="Đóng chat">
+                <i class="fa-solid fa-minus"></i>
+            </button>
+        </div>
+
+        <!-- Vùng hiển thị nội dung tin nhắn -->
+        <div class="ai-chat-body" id="ai-chat-messages">
+            <!-- Tin nhắn chào mừng mặc định của AI -->
+            <div class="msg-wrapper ai">
+                <div class="msg-bubble">
+                    Gâu! Xin chào! Tôi là **Pawsie**, chuyên viên tư vấn AI của Happy Paws. 🐾<br><br>
+                    Tôi có thể giúp bạn tìm hiểu nhanh về các **Dịch vụ Spa cún cưng** hoặc các **Chương trình ưu đãi** hiện có. Bạn cần tôi hỗ trợ gì ạ?
+                </div>
+            </div>
+        </div>
+
+        <!-- Vùng các nút gợi ý nhanh (Quick Replies) giúp khách click lẹ -->
+        <div class="ai-chat-suggestions">
+            <button class="suggest-btn" data-query="Menu dịch vụ Spa gồm những gì?">✂️ Dịch vụ Spa</button>
+            <button class="suggest-btn" data-query="Hiện tại có chương trình ưu đãi gì mới không?">🎁 Khuyến mãi hot</button>
+            <button class="suggest-btn" data-query="Giá tắm vệ sinh trọn gói bao nhiêu?">💰 Bảng giá Spa</button>
+        </div>
+
+        <!-- Ô nhập tin nhắn phía dưới cùng -->
+        <div class="ai-chat-footer">
+            <input type="text" id="ai-chat-input" placeholder="Hỏi Pawsie về Spa & Ưu đãi..." autocomplete="off">
+            <button id="ai-chat-send" aria-label="Gửi">
+                <i class="fa-solid fa-paper-plane"></i>
+            </button>
+        </div>
+    </div>
 
     <!-- Core Javascript controllers -->
     <script src="script.js"></script>

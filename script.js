@@ -512,10 +512,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 3200);
     };
 
-    // AI assistant removed: related DOM elements and handlers were deleted
-
     // ================================================================
-    // 12. FORM SUBMISSION EMULATION (TOAST NOTIFICATIONS)
+    // 11. FORM SUBMISSION EMULATION (TOAST NOTIFICATIONS)
     // ================================================================
     if (loginForm) {
         loginForm.addEventListener('submit', (e) => {

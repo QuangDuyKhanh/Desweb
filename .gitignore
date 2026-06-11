@@ -29,6 +29,8 @@ desktop.ini
 secrets.json
 config.local.js
 
+# --- Backend Database ---
+backend/users.json
 # --- Node.js (nếu dùng trong tương lai) ---
 node_modules/
 npm-debug.log*

@@ -367,7 +367,7 @@ document.addEventListener('DOMContentLoaded', () => {
     highlightActiveLink();
 
     // ================================================================
-    // 10. PREMIUM GLASSMORPHIC LOGIN/REGISTER POPUP CONTROLLER
+    // 10. PREMIUM GLASSMORPHIC LOGIN/REGISTER POPUP CONTROLLER & API INTEGRATION
     // ================================================================
     const loginTrigger = document.getElementById('login-trigger');
     const mobileLoginTrigger = document.getElementById('mobile-login-trigger');
@@ -378,7 +378,129 @@ document.addEventListener('DOMContentLoaded', () => {
     const loginForm = document.getElementById('login-form');
     const registerForm = document.getElementById('register-form');
 
+    const API_BASE_URL = 'http://localhost:5000/api/auth';
+
+    // --- HIỆU ỨNG THÔNG BÁO TOAST SANG TRỌNG ---
+    const showToast = (message, type = 'success') => {
+        // Xóa các toast cũ nếu có
+        const existingToasts = document.querySelectorAll('.custom-toast');
+        existingToasts.forEach(t => t.remove());
+
+        const toast = document.createElement('div');
+        toast.className = `custom-toast ${type}`;
+        
+        // CSS Style trực tiếp để đảm bảo tính độc lập và premium
+        toast.style.cssText = `
+            position: fixed;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%) translateY(-20px);
+            background: ${type === 'success' 
+                ? 'linear-gradient(135deg, rgba(15, 118, 110, 0.95) 0%, rgba(63, 143, 128, 0.95) 100%)' 
+                : 'linear-gradient(135deg, rgba(185, 28, 28, 0.95) 0%, rgba(220, 38, 38, 0.95) 100%)'};
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            color: #FFFFFF;
+            padding: 16px 36px;
+            border-radius: 100px;
+            font-family: var(--font-primary);
+            font-weight: 600;
+            font-size: 0.95rem;
+            box-shadow: var(--shadow-deep), 0 0 20px ${type === 'success' ? 'rgba(15, 118, 110, 0.2)' : 'rgba(185, 28, 28, 0.2)'};
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            opacity: 0;
+            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        `;
+        
+        const icon = document.createElement('i');
+        icon.className = type === 'success' ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-exclamation';
+        icon.style.cssText = `
+            color: #FFFFFF;
+            font-size: 1.15rem;
+        `;
+        
+        const text = document.createElement('span');
+        text.innerText = message;
+        
+        toast.appendChild(icon);
+        toast.appendChild(text);
+        document.body.appendChild(toast);
+        
+        // Kích hoạt animation xuất hiện
+        setTimeout(() => {
+            toast.style.opacity = '1';
+            toast.style.transform = 'translateX(-50%) translateY(0)';
+        }, 50);
+        
+        // Tự động đóng và biến mất
+        setTimeout(() => {
+            toast.style.opacity = '0';
+            toast.style.transform = 'translateX(-50%) translateY(-20px)';
+            setTimeout(() => {
+                toast.remove();
+            }, 500);
+        }, 3200);
+    };
+
+    // Đăng xuất tài khoản
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+        updateAuthUI(null);
+        showToast('Bạn đã đăng xuất tài khoản thành công!', 'success');
+    };
+
+    // Cập nhật giao diện Đăng nhập / Đăng ký dựa trên trạng thái
+    const updateAuthUI = (user) => {
+        if (user) {
+            // Đã đăng nhập - Desktop
+            if (loginTrigger) {
+                if (!loginTrigger.dataset.originalHtml) {
+                    loginTrigger.dataset.originalHtml = loginTrigger.innerHTML;
+                }
+                loginTrigger.innerHTML = `<i class="fa-solid fa-user-circle"></i> Chào, ${user.name}`;
+                loginTrigger.title = "Nhấp để đăng xuất";
+                loginTrigger.style.background = 'linear-gradient(135deg, #0f766e 0%, #115e59 100%)';
+                loginTrigger.style.borderColor = '#0f766e';
+                loginTrigger.classList.add('logged-in');
+            }
+            // Đã đăng nhập - Mobile
+            if (mobileLoginTrigger) {
+                if (!mobileLoginTrigger.dataset.originalHtml) {
+                    mobileLoginTrigger.dataset.originalHtml = mobileLoginTrigger.innerHTML;
+                }
+                mobileLoginTrigger.innerHTML = `<i class="fa-solid fa-user-circle"></i> Chào, ${user.name} (Đăng xuất)`;
+                mobileLoginTrigger.classList.add('logged-in');
+            }
+        } else {
+            // Chưa đăng nhập / Đã đăng xuất - Desktop
+            if (loginTrigger) {
+                loginTrigger.innerHTML = loginTrigger.dataset.originalHtml || '<i class="fa-solid fa-user"></i> Login';
+                loginTrigger.title = "Đăng nhập";
+                loginTrigger.style.background = '';
+                loginTrigger.style.borderColor = '';
+                loginTrigger.classList.remove('logged-in');
+            }
+            // Chưa đăng nhập / Đã đăng xuất - Mobile
+            if (mobileLoginTrigger) {
+                mobileLoginTrigger.innerHTML = mobileLoginTrigger.dataset.originalHtml || '<i class="fa-solid fa-user"></i> Đăng Nhập / Đăng Ký';
+                mobileLoginTrigger.classList.remove('logged-in');
+            }
+        }
+    };
+
     const openAuthModal = () => {
+        // Nếu đã đăng nhập, click sẽ là đăng xuất
+        if (loginTrigger && loginTrigger.classList.contains('logged-in')) {
+            if (confirm('Bạn có muốn đăng xuất tài khoản không?')) {
+                handleLogout();
+            }
+            return;
+        }
         if (authContainer) {
             authContainer.classList.add('active');
             document.body.style.overflow = 'hidden'; // Ngăn cuộn trang nền
@@ -401,8 +523,17 @@ document.addEventListener('DOMContentLoaded', () => {
     if (mobileLoginTrigger) {
         mobileLoginTrigger.addEventListener('click', (e) => {
             e.preventDefault();
-            closeMenu(); // Đóng menu di động thông qua hàm đã khai báo an toàn ở phạm vi ngoài
-            setTimeout(openAuthModal, 300); // Mở modal popup sau khi đóng drawer mượt mà
+            if (mobileLoginTrigger.classList.contains('logged-in')) {
+                closeMenu();
+                setTimeout(() => {
+                    if (confirm('Bạn có muốn đăng xuất tài khoản không?')) {
+                        handleLogout();
+                    }
+                }, 300);
+                return;
+            }
+            closeMenu(); // Đóng menu di động
+            setTimeout(openAuthModal, 300); // Mở modal popup
         });
     }
 
@@ -448,90 +579,134 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // --- HIỆU ỨNG THÔNG BÁO TOAST SANG TRỌNG (UI/UX SIMULATOR) ---
-    const showToast = (message, type = 'success') => {
-        // Xóa các toast cũ nếu có
-        const existingToasts = document.querySelectorAll('.custom-toast');
-        existingToasts.forEach(t => t.remove());
-
-        const toast = document.createElement('div');
-        toast.className = `custom-toast ${type}`;
-        
-        // CSS Style trực tiếp để đảm bảo tính độc lập và premium
-        toast.style.cssText = `
-            position: fixed;
-            top: 40px;
-            left: 50%;
-            transform: translateX(-50%) translateY(-20px);
-            background: linear-gradient(135deg, rgba(15, 118, 110, 0.95) 0%, rgba(63, 143, 128, 0.95) 100%);
-            backdrop-filter: blur(12px);
-            -webkit-backdrop-filter: blur(12px);
-            color: #FFFFFF;
-            padding: 16px 36px;
-            border-radius: 100px;
-            font-family: var(--font-primary);
-            font-weight: 600;
-            font-size: 0.95rem;
-            box-shadow: var(--shadow-deep), 0 0 20px rgba(15, 118, 110, 0.2);
-            z-index: 9999;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            opacity: 0;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            border: 1px solid rgba(255, 255, 255, 0.2);
-        `;
-        
-        const icon = document.createElement('i');
-        icon.className = type === 'success' ? 'fa-solid fa-circle-check' : 'fa-solid fa-circle-exclamation';
-        icon.style.cssText = `
-            color: #FFFFFF;
-            font-size: 1.15rem;
-        `;
-        
-        const text = document.createElement('span');
-        text.innerText = message;
-        
-        toast.appendChild(icon);
-        toast.appendChild(text);
-        document.body.appendChild(toast);
-        
-        // Kích hoạt animation xuất hiện
-        setTimeout(() => {
-            toast.style.opacity = '1';
-            toast.style.transform = 'translateX(-50%) translateY(0)';
-        }, 50);
-        
-        // Tự động đóng và biến mất
-        setTimeout(() => {
-            toast.style.opacity = '0';
-            toast.style.transform = 'translateX(-50%) translateY(-20px)';
-            setTimeout(() => {
-                toast.remove();
-            }, 500);
-        }, 3200);
-    };
-
     // ================================================================
-    // 11. FORM SUBMISSION EMULATION (TOAST NOTIFICATIONS)
+    // 11. FORM SUBMISSION (CONNECT TO REAL BACKEND API)
     // ================================================================
     if (loginForm) {
-        loginForm.addEventListener('submit', (e) => {
+        loginForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const emailInput = loginForm.querySelector('input[type="email"]');
-            const email = emailInput ? emailInput.value : '';
-            closeAuthModal();
-            showToast(`Chào mừng quay trở lại! Bạn đã đăng nhập thành công bằng email ${email}.`, 'success');
+            const passwordInput = loginForm.querySelector('input[type="password"]');
+
+            const email = emailInput ? emailInput.value.trim() : '';
+            const password = passwordInput ? passwordInput.value : '';
+
+            if (!email || !password) {
+                showToast('Vui lòng nhập đầy đủ email và mật khẩu!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/login`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    localStorage.setItem('token', data.token);
+                    localStorage.setItem('user', JSON.stringify(data.user));
+                    
+                    updateAuthUI(data.user);
+                    closeAuthModal();
+                    showToast(data.message || 'Đăng nhập thành công!', 'success');
+                    loginForm.reset();
+                } else {
+                    showToast(data.message || 'Đăng nhập thất bại!', 'error');
+                }
+            } catch (error) {
+                console.error('Lỗi kết nối API đăng nhập:', error);
+                showToast('Không thể kết nối đến máy chủ backend!', 'error');
+            }
         });
     }
 
     if (registerForm) {
-        registerForm.addEventListener('submit', (e) => {
+        registerForm.addEventListener('submit', async (e) => {
             e.preventDefault();
             const nameInput = registerForm.querySelector('input[placeholder="Họ và tên của bạn"]');
-            const name = nameInput ? nameInput.value : '';
-            closeAuthModal();
-            showToast(`Chúc mừng ${name}! Tài khoản của bạn đã được khởi tạo thành công.`, 'success');
+            const emailInput = registerForm.querySelector('input[placeholder="Địa chỉ Email"]');
+            const passwordInput = registerForm.querySelector('input[type="password"]');
+
+            const name = nameInput ? nameInput.value.trim() : '';
+            const email = emailInput ? emailInput.value.trim() : '';
+            const password = passwordInput ? passwordInput.value : '';
+
+            if (!name || !email || !password) {
+                showToast('Vui lòng điền đầy đủ các trường thông tin!', 'error');
+                return;
+            }
+
+            try {
+                const response = await fetch(`${API_BASE_URL}/register`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ name, email, password })
+                });
+
+                const data = await response.json();
+
+                if (response.ok) {
+                    showToast(data.message || 'Tạo tài khoản thành công!', 'success');
+                    // Reset form đăng ký
+                    registerForm.reset();
+                    // Tự động chuyển sang Tab đăng nhập để người dùng tiện sử dụng
+                    if (tabLoginBtn) tabLoginBtn.click();
+                } else {
+                    showToast(data.message || 'Đăng ký thất bại!', 'error');
+                }
+            } catch (error) {
+                console.error('Lỗi kết nối API đăng ký:', error);
+                showToast('Không thể kết nối đến máy chủ backend!', 'error');
+            }
         });
     }
+
+    // Kiểm tra trạng thái đăng nhập khi tải trang
+    const checkLoginState = async () => {
+        const token = localStorage.getItem('token');
+        const userStr = localStorage.getItem('user');
+
+        if (token && userStr) {
+            try {
+                // Xác thực token với server để chắc chắn token còn hiệu lực
+                const response = await fetch(`${API_BASE_URL}/me`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`
+                    }
+                });
+
+                if (response.ok) {
+                    const data = await response.json();
+                    updateAuthUI(data.user);
+                    localStorage.setItem('user', JSON.stringify(data.user)); // Cập nhật lại thông tin user
+                } else {
+                    // Token hết hạn hoặc không hợp lệ, đăng xuất tự động
+                    localStorage.removeItem('token');
+                    localStorage.removeItem('user');
+                    updateAuthUI(null);
+                }
+            } catch (error) {
+                console.warn('Lỗi kết nối backend khi check token, tạm thời sử dụng cache:', error);
+                // Nếu backend offline tạm thời, vẫn duy trì UI đăng nhập từ cache cục bộ
+                try {
+                    updateAuthUI(JSON.parse(userStr));
+                } catch (e) {
+                    updateAuthUI(null);
+                }
+            }
+        } else {
+            updateAuthUI(null);
+        }
+    };
+
+    // Chạy kiểm tra đăng nhập ngay khi trang tải xong
+    checkLoginState();
 });

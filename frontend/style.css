@@ -128,7 +128,7 @@ section {
 .container {
     width: 100%;
     max-width: var(--container-width);
-    margin: 0 auto;
+    margin: auto;
     padding: 0 32px;
 }
 
@@ -1523,10 +1523,10 @@ header.sticky {
 
 .cta-container {
     background-color: var(--color-primary-light);
-    border-radius: var(--border-radius-xl);
+    border-radius: 0;
     overflow: hidden;
     box-shadow: var(--shadow-medium);
-    margin: 0 32px;
+    margin: 0;
 }
 
 .cta-grid {
